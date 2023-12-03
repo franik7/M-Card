@@ -291,3 +291,33 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+/**
+   * Create offset
+   */
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('a[href^="#"]');
+  var offset = 60; // Set your desired offset value
+
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      var hash = this.hash;
+      var target = document.querySelector(hash);
+
+      if (target) {
+        var topPos = target.offsetTop - offset;
+
+        window.scrollTo({
+          top: topPos,
+          behavior: 'smooth'
+        });
+
+        // Update URL hash without jumping
+        history.pushState(null, null, hash);
+      }
+    });
+  });
+});
