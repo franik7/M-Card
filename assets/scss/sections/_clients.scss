@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+  padding: 40px 0;
+  
+  .swiper {
+    padding: 10px 0;
+  }
+  .swiper-slide {
+    img {
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+    
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #fff;
+      opacity: 1;
+      background-color: #ddd;
+    }
+    
+    .swiper-pagination-bullet-active {
+      background-color: var(--color-primary);
+    }
+  }
+}

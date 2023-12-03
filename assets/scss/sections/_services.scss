@@ -1,0 +1,75 @@
+/*--------------------------------------------------------------
+# Our Services Section
+--------------------------------------------------------------*/
+.services {
+  padding: 60px 0;
+
+  .service-item {
+    padding: 40px;
+    background: #fff;
+    height: 100%;
+    border-radius: 10px;
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      position: relative;
+      margin-bottom: 50px;
+
+      i {
+        color: var(--color-default);
+        font-size: 56px;
+        transition: ease-in-out 0.3s;
+        z-index: 2;
+        position: relative;
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        background: lighten($default, 80);
+        border-radius: 50px;
+        z-index: 1;
+        top: 10px;
+        right: -20px;
+        transition: 0.3s;
+      }
+    }
+
+    h3 {
+      color: var(--color-default);
+      font-weight: 700;
+      margin:  0 0 20px 0;
+      padding-bottom: 8px;
+      font-size: 22px;
+      position: relative;
+      display: inline-block;
+      border-bottom: 4px solid lighten($default, 80);
+      transition: 0.3s;
+    }
+
+    p {
+      line-height: 24px;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .readmore {
+      margin-top: 15px;
+      display: inline-block;
+      color: var(--color-primary);
+    }
+
+    &:hover {
+      .icon:before {
+        background: lighten($primary, 10);
+      }
+      h3 {
+        border-color: var(--color-primary);
+      }
+    }
+
+  }
+}

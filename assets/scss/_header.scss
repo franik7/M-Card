@@ -1,0 +1,93 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.topbar {
+  background: darken($primary, 2);
+  height: 40px;
+  font-size: 14px;
+  transition: all 0.5s;
+  color: #fff;
+  padding: 0;
+
+  .contact-info {
+    i {
+      font-style: normal;
+      color: #fff;
+      line-height: 0;
+
+      a, span {
+        padding-left: 5px;
+        color: #fff;
+        @media (max-width: 575px) {
+          font-size: 13px;
+        }
+      }
+
+      a {
+        line-height: 0;
+        transition: 0.3s;
+        &:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+
+  .social-links {
+    a {
+      color: rgba(255, 255, 255, .7);
+      line-height: 0;
+      transition: 0.3s;
+      margin-left: 20px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.header {
+  transition: all 0.5s;
+  z-index: 997;
+  height: 90px;
+  background-color: var(--color-primary);
+
+  &.sticked  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    box-shadow: 0px 2px 20px rgba(#000, 0.1);
+  }
+
+  .logo {
+    img {
+      max-height: 40px;
+      margin-right: 6px;
+    }
+    
+    h1 {
+      font-size: 30px;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      color: #fff;
+      font-family: var(--font-primary);
+      span {
+        color: lighten($secondary, 5);
+      }
+    }
+
+  }
+}
+
+.sticked-header-offset {
+  margin-top: 70px;
+}
+
+section {
+  scroll-margin-top: 70px;
+}

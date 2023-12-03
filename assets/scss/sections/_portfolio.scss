@@ -1,0 +1,88 @@
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+.portfolio {
+
+  .portfolio-flters {
+    padding: 0 0 20px 0;
+    margin:0 auto;
+    list-style:none;
+    text-align:center;
+
+    li {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 10px;
+      line-height: 1;
+      transition: all 0.3s ease-in-out;
+
+
+      &:hover, &.filter-active {
+        color: var(--color-primary);
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 14px;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .portfolio-wrap {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      transition: 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .portfolio-info {
+      padding: 25px 20px;
+      background-color: #fff;
+      position: relative;
+      border-top: 1px solid #f3f3f3;
+      z-index: 2;
+
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        padding-right: 50px;
+        a {
+          color: var(--color-default);
+          transition: 0.3s;
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+      }
+
+      p {
+        color: #6c757d;
+        font-size: 14px;
+        margin-bottom: 0;
+        padding-right: 50px;
+      }
+      
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
