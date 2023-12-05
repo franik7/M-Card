@@ -2004,7 +2004,7 @@ section {
   color: #fff;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .hero .icon-boxes {
     display: none;
   }
